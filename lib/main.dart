@@ -1,4 +1,7 @@
 import 'package:first_api/home_screen.dart';
+import 'package:first_api/photos_api.dart';
+import 'package:first_api/user_api.dart';
+import 'package:first_api/user_api2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const UserApi2(),
     );
   }
 }
