@@ -17,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
   void showSuccessAlert(BuildContext context) {
     StatusAlert.show(
       context,
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 5),
       title: 'Login successfully',
       //subtitle: 'Operation completed successfully!',
       configuration: IconConfiguration(icon: Icons.check),
@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Title(color: Colors.black, child:Text("Signup Page")),
+        title: Title(color: Colors.black, child:Text("Login Page")),
         backgroundColor: Colors.blueAccent,
       ),
       body: Column(
@@ -109,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
               onTap: (){
                 Register(emailController.text.toString(),passwordController.text.toString());
               },
-              child: Center(child: Text('Sing Up',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),)),
+              child: Center(child: Text('Login',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),)),
             ),
           )
 

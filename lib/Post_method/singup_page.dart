@@ -18,7 +18,7 @@ class _SingupPageState extends State<SingupPage> {
   void showSuccessAlert(BuildContext context) {
     StatusAlert.show(
       context,
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 5),
       title: 'Account created successfully',
       //subtitle: 'Operation completed successfully!',
       configuration: IconConfiguration(icon: Icons.check),
@@ -37,6 +37,7 @@ class _SingupPageState extends State<SingupPage> {
       var data = jsonDecode(response.body.toString());
       if(response.statusCode==200){
         print("account created successfully");
+        print(data['token']);
         showSuccessAlert(context);
       }
       else{
